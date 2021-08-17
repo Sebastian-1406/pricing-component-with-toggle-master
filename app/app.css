@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+    --font : 'Montserrat', sans-serif;
+    --linear-gradient-1 : hsl(236, 72%, 79%);
+    --linear-gradient-2 : hsl(237, 63%, 64%);
+    --very-Light-Grayish-Blue : hsl(240, 78%, 98%);
+    --Light-Grayish-Blue : hsl(234, 14%, 74%);
+    --Grayish-Blue : hsl(233, 13%, 49%);
+    --dark-Grayish-Blue : hsl(232, 13%, 33%);
+}
+
+body{
+    font-family: var(--font);
+    background: var(--very-Light-Grayish-Blue);
+    display: flex;
+    justify-content: center;
+}
+.header{
+    text-align: center;
+}
+
+.header__texto-titulo {
+    color: var(--dark-Grayish-Blue);
+    margin-bottom: 1em;
+}
+.contenido{
+    padding: 50px 20px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.switch-texto {
+    color: var(--Grayish-Blue);
+}
+
+.option{
+    background-image: linear-gradient(var(--linear-gradient-1), var(--linear-gradient-2));
+    border: none;
+    width: 65px;
+    height: 35px;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.option::after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: inherit;
+}
+
+.option__active .option::after{
+    right: 5px;
+    left: inherit;
+}
+
+.main {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.seccion__planes {
+    text-align: center;
+    border-radius: 10px;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0px 0px 7px #0002;
+}
+
+.seccion__planes-professional{
+    background-image: linear-gradient(var(--linear-gradient-1), var(--linear-gradient-2));
+}
+.seccion__planes-professional .seccion__texto-titulo {
+    color: #fff;
+}
+.seccion__planes-professional .seccion__precio {
+    color: #fff;
+}
+.seccion__planes-professional .texto__descipcion {
+    color: #fff;
+}
+.seccion__planes-professional .btn{
+    background: #fff;
+    color: var(--linear-gradient-2);
+}
+
+.seccion__texto-titulo{
+    color: var(--Grayish-Blue);
+}
+
+.seccion__precio {
+    font-size: 2em;
+    color: var(--dark-Grayish-Blue);
+}
+
+.seccion__descripcion-border {
+    border-top: 1px solid var(--Light-Grayish-Blue);
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.texto__descipcion {
+    color: var(--Grayish-Blue);
+}
+
+.btn {
+    display: block;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 13px 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-image: linear-gradient( 90deg , var(--linear-gradient-1), var(--linear-gradient-2));
+    color: var(--very-Light-Grayish-Blue);
+    letter-spacing: 1px;
+}
+.seccion__precio-mes {
+    display: none;
+}
+
+/* js */
+
+.option__active .seccion__precio-anio {
+    display: none;
+}
+.option__active .seccion__precio-mes {
+    display: block;
+}
