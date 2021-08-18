@@ -48,6 +48,7 @@ body{
     border-radius: 100px;
     position: relative;
     cursor: pointer;
+    outline: none;
 }
 
 .option::after{
@@ -133,6 +134,7 @@ body{
     color: var(--very-Light-Grayish-Blue);
     letter-spacing: 1px;
     border: 1px solid currentColor;
+    outline: none;
 }
 .seccion__precio-mes {
     display: none;
